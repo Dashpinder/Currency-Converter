@@ -15,7 +15,7 @@ btn.addEventListener("click", function(){
 async function myFunction(fromCurrency, toCurrency, amount){
     const results= document.getElementById("results");
     
-   let response= await fetch(`https://api.currencyapi.com/v3/latest?apikey=cur_live_gyTYYxhuHIUI7Js5NPS1gRbgOT2fpyelcZI0P6Zc`);
+   let response= await fetch(`https://api.currencyapi.com/v3/latest?apikey=cur_live_gyTYYxhuHIUI7Js5NPS1gRbgOT2fpyelcZI0P6Zc&base_currency=${fromCurrency}`);
 
    let pkaData= await response.json();
    console.log(pkaData);
